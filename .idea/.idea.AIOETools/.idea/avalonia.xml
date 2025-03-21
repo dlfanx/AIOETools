@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="AIOETools/App.axaml" value="AIOETools/AIOETools.csproj" />
+        <entry key="AIOETools/Styles/AppDefaultStyles.axaml" value="AIOETools/AIOETools.csproj" />
+        <entry key="AIOETools/Styles/BarcodeGeneratorWindow.axaml" value="AIOETools/AIOETools.csproj" />
+        <entry key="AIOETools/Views/BarcodeGeneratorWindow.axaml" value="AIOETools/AIOETools.csproj" />
+        <entry key="AIOETools/Views/MainWindow.axaml" value="AIOETools/AIOETools.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

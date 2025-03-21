@@ -1,0 +1,35 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:themes="clr-namespace:Avalonia.Themes.Fluent;assembly=Avalonia.Themes.Fluent"
+             x:Class="AIOETools.App">
+    <TrayIcon.Icons>
+        <TrayIcons>
+            <TrayIcon Icon="/Assets/icon.ico" 
+                      ToolTipText="AIOETools by dlfanx">
+                <TrayIcon.Menu>
+                    <NativeMenu>
+                        <NativeMenuItem Header="AIOETools by dlfanx" />
+                    </NativeMenu>
+                </TrayIcon.Menu>
+            </TrayIcon>
+        </TrayIcons>
+    </TrayIcon.Icons>
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="avares://AIOETools/Styles/AppDefaultStyles.axaml"/>
+        <Style Selector="TextBlock">
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryText}"/>
+        </Style>
+        <Style Selector="Button">
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryText}"/>
+            <Setter Property="Background" Value="{DynamicResource ButtonBackground}"/>
+        </Style>
+    </Application.Styles>
+    <Application.Resources>
+        <SolidColorBrush x:Key="PrimaryBackground">#190930</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryText">#fde6ff</SolidColorBrush>
+        <SolidColorBrush x:Key="ButtonBackground">#2f1554</SolidColorBrush>
+    </Application.Resources>
+</Application>

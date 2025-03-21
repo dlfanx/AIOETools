@@ -1,0 +1,67 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AIOETools.MainWindow"
+        Width="720" Height="480"
+        Title="AIOETools by dlfanx">
+    
+    <Grid Background="{DynamicResource PrimaryBackground}"  ColumnDefinitions="*, Auto">  
+        <Grid RowDefinitions="Auto, Auto, *">
+            <Border Background="{DynamicResource ButtonBackground}" Padding="10">
+                <Grid ColumnDefinitions="*, Auto, Auto">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <Image Source="avares://AIOETools/Assets/icon.ico" Width="30" Height="30"/>
+                        <StackPanel>
+                            <TextBlock Text="AIOETools" FontSize="24" FontWeight="Bold" VerticalAlignment="Center"/>
+                            <TextBlock Text="Ver 1.0" FontSize="8" HorizontalAlignment="Right"/>
+                        </StackPanel>
+                        <TextBlock Text="by dlfanx" FontSize="12" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <Button Grid.Column="1" Name="UnlockIdmButton" Content="Unlock all" Background="#db3941" Foreground="{DynamicResource PrimaryText}" Click="UnlockAllButton_Click"/>
+                    <Button Grid.Column="2" Name="MinimizeButton" Content="Minimize" Background="{DynamicResource PrimaryBackground}"/>
+                </Grid>
+            </Border>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="20" HorizontalAlignment="Center">
+                <StackPanel Spacing="5">
+                    <TextBlock Text="Windows Tools" FontSize="10" Padding="10, 10,0,0"></TextBlock>
+                    <Button Name="OpenCmdButton" Content="cmd" Width="120"/>
+                    <Button Name="OpenCalcButton" Content="calc" Width="120"/>
+                    <Button Name="OpenWordPadButton" Content="wordpad" Width="120"/>
+                    <Button Name="OpenNotepadButton" Content="notepad" Width="120"/>
+                    <Button Name="OpenExplorerButton" Content="explorer" Width="120"/>
+                    <Button Name="OpenGpeditButton" Content="gpedit" Width="120"/>
+                </StackPanel>
+                
+                <StackPanel Spacing="5">
+                    <TextBlock Text="IDM Tools" FontSize="10" Padding="10, 10,0,0"></TextBlock>
+                    <Button Name="OpenBarcodeGenButton" Content="Barcode Gen" Width="120" Click="OpenBarcodeGenButton_Click"/>
+                    <!-- <Button Name="OpenCustomStrukButton" Content="Custom Struk" Width="120"/> -->
+                    <Button Name="OpenInvoiceButton" Content="Invoice" Width="120"/>
+                    <Button Name="OpenInitialButton" Content="Initial" Width="120"/>
+                    <Button Name="OpenPriceTagButton" Content="Pricetag" Width="120"/>
+                </StackPanel>
+                
+                <StackPanel Spacing="5">
+                    <TextBlock Text="Recent Capture:" FontSize="10" Padding="10, 10,0,0"/>
+                    <Border Background="White" BorderBrush="Gray" BorderThickness="1" Height="100"/>
+                    <Button Name="OpenFolderButton" Content="Open Folder" Width="250"/>
+                    <Border Background="{DynamicResource ButtonBackground}" CornerRadius="5" Padding="5" Margin="0,10,0,0">
+                        <ToggleSwitch Foreground="{DynamicResource PrimaryText}" Name="IsStartupToggle" Content="Start with Windows" IsChecked="False"/>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+            
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Log:" FontSize="10"></TextBlock>
+                <Border Background="White" BorderBrush="Gray" BorderThickness="1" Padding="5" Width="400" Height="90">
+                    <ScrollViewer>
+                        <TextBlock Name="LogBox" TextWrapping="Wrap" Foreground="Navy"/>
+                    </ScrollViewer>
+                </Border>
+                <StackPanel>
+                    <Button Name="CaptureButton" Content="Capture Screen!" HorizontalAlignment="Stretch"/>
+                    <TextBlock Text="Warning! This software is for educational purposes only. Use at your own risk!" Width="150" TextWrapping="Wrap" FontSize="8" Padding="5"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
